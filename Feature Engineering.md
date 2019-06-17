@@ -19,10 +19,7 @@ The decision to use a moving window approach was followed by analysis in to the 
 ![s](https://i.ibb.co/TrH5qCw/1133.jpg)
 
 ```python
-mean_acc_gyro = merged.groupby('bookingID', as_index=False)\
-                              ['acceleration_x','acceleration_y', \
-                              'acceleration_z','gyro_x','gyro_y', 'gyro_z']\
-                              .rolling(4).mean().reset_index()
+mean_acc_gyro = merged.groupby('bookingID', as_index=False)\                  ['acceleration_x','acceleration_y','acceleration_z','gyro_x','gyro_y', 'gyro_z'].rolling(4).mean().reset_index()
 ```
 
 The above code , calculates a moving average of 4 seconds. To extract the mean of the sliding window we then extract the information from the moving average with the code below, which takes every 4th row value of the rolling mean and assigns to its respective feature vector.
@@ -77,9 +74,7 @@ Pitch and Roll is one of the most important features in terms of detecting abnor
 The pitch and roll values are calculated for every data point. 
 
 ```python
-merged['PITCH'] = np.arctan2(-merged.acceleration_x, \
-                  np.sqrt(merged.acceleration_y *    \
-                  merged.acceleration_y + merged.acceleration_z * merged.acceleration_z)) * 57.3
+merged['PITCH'] = np.arctan2(-merged.acceleration_x,     np.sqrt(merged.acceleration_y * merged.acceleration_y + merged.acceleration_z * merged.acceleration_z)) * 57.3
 
 merged['ROLL'] = np.arctan2(merged.acceleration_y, merged.acceleration_z) * 57.3
 ```
@@ -108,15 +103,15 @@ The bearing rate is the change in bearing at every data point divided by the tim
 
 Acceleration was calculated with change in speed divided by the time interval and for every point. The maximum acceleration for each booking was used as a final feature. 
 
-
-
 ### Summary table for Feature Engineering
 
 <img src="https://i.ibb.co/Wc4FnRL/table.png" alt="table" border="0">
 
+## Feature importance
 
+The table below shows the random forest feature importancWe table. We can conclude that the engineered features are very effective and useful for the model.
 
-
+<img src="https://i.ibb.co/RC2f3Pb/feature-importance.png" alt="feature-importance" border="0">
 
 ### References
 
