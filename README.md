@@ -4,6 +4,24 @@ This repo reflects the work I have carried out to fullfill the requirements of t
 
 ![](https://i.ibb.co/wBSJbXw/sssss.png)
 
+
+
+## Navigate
+
+---
+
+[Details and thought process behind Feature Engineering] (http://duh.me)
+
+- [ ] 
+
+[Feature Engineering](sss)
+
+---
+
+
+
+
+
 ## Key findings - Adopted Strategies
 
 The key findings and adopted strategy used are summarised in the as below.
@@ -19,8 +37,6 @@ The key findings and adopted strategy used are summarised in the as below.
 - BookingID variable with value 0, duplicates in the label where two labels exisit for a signle BookingID. **Removed bookingID with value 0, removed duplicate bookingID from the labels**
 
 - Since each bookingID has many records or data points, a proper aggregation strategy is required to reduce loss of information during the aggregation. **Sum , Maximum and Standard Deviation for the engineered features was used to keep loss of information to a minimal**
-
-## https://github.com/Muaado/grab_safety_challenge/blob/master/README.md#feature-engineering
 
 ## Feature Engineering
 
