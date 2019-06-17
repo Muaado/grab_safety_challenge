@@ -8,7 +8,7 @@ This repo reflects the work I have carried out to fullfill the requirements of  
 
 - :rocket:  [Feature Engineering - And thought process behind it](https://github.com/Muaado/grab_safety_challenge/blob/master/Feature%20Engineering.md)
 - :ticket:  [Instructions for using the saved model](https://github.com/Muaado/grab_safety_challenge/blob/master/RUN_SAVED_MODEl.ipynb)
-- :checkered_flag:  [Full process - training and feature engineering](http://www.google.com)
+- :checkered_flag:  [Full process - training and feature engineering](https://github.com/Muaado/grab_safety_challenge/blob/master/Training%20Process.ipynb)
 
 ---
 
