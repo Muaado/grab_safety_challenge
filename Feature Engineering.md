@@ -74,7 +74,9 @@ Pitch and Roll is one of the most important features in terms of detecting abnor
 The pitch and roll values are calculated for every data point. 
 
 ```python
-merged['PITCH'] = np.arctan2(-merged.acceleration_x,     np.sqrt(merged.acceleration_y * merged.acceleration_y + merged.acceleration_z * merged.acceleration_z)) * 57.3
+merged['PITCH'] = np.arctan2(-merged.acceleration_x, \
+                  np.sqrt(merged.acceleration_y *    \
+                  merged.acceleration_y + merged.acceleration_z * merged.acceleration_z)) * 57.3
 
 merged['ROLL'] = np.arctan2(merged.acceleration_y, merged.acceleration_z) * 57.3
 ```
