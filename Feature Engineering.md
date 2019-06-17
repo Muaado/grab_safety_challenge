@@ -19,7 +19,10 @@ The decision to use a moving window approach was followed by analysis in to the 
 ![s](https://i.ibb.co/TrH5qCw/1133.jpg)
 
 ```python
-mean_acc_gyro = merged.groupby('bookingID', as_index=False)\                  ['acceleration_x','acceleration_y','acceleration_z','gyro_x','gyro_y', 'gyro_z'].rolling(4).mean().reset_index()
+mean_acc_gyro = merged.groupby('bookingID', as_index=False)\
+                                ['acceleration_x','acceleration_y', \
+                                'acceleration_z','gyro_x','gyro_y', 'gyro_z'] \
+                                .rolling(4).mean().reset_index()
 ```
 
 The above code , calculates a moving average of 4 seconds. To extract the mean of the sliding window we then extract the information from the moving average with the code below, which takes every 4th row value of the rolling mean and assigns to its respective feature vector.
